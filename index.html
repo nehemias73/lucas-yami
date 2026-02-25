@@ -295,6 +295,20 @@
             align-items: flex-end; /* Alinea los pies de los personajes al fondo */
             justify-content: center;
         }
+        /* Ajuste automático para Celulares */
+        @media (max-width: 768px) {
+            .avatar-container {
+                width: 130px;  /* Se achican para que no ocupen toda la pantalla */
+                height: 200px; /* Ajustamos la altura proporcionalmente */
+            }
+
+            /* Opcional: reducimos un poco el movimiento para que no se vea 'nervioso' en móvil */
+            @keyframes oscillate {
+                0% { transform: rotate(-1.5deg); }
+                50% { transform: rotate(1.5deg); }
+                100% { transform: rotate(-1.5deg); }
+            }
+        }
 
         .avatar-container img {
             width: 100%;
@@ -326,6 +340,21 @@
         .animation-pulse-soft {
             animation: pulseSoft 4s ease-in-out infinite;
         }
+        @media (max-width: 768px) {
+        /* Ajuste para que el Alias no se salga del contenedor */
+        #gift-details p.text-2xl {
+            font-size: 1.25rem !important; /* Achica un poco la letra */
+            letter-spacing: 0.1em !important; /* Reduce el espacio entre letras */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        /* Ajuste del padding del contenedor para que respire mejor */
+        #gift-details {
+            padding-left: 1.5rem !important;
+            padding-right: 1.5rem !important;
+        }
+    }
     </style>
 </head>
 <body>
@@ -373,7 +402,7 @@
             <div class="md:w-2/4 text-center order-1 md:order-2">
                 <h2 class="text-2xl mb-8 uppercase tracking-[0.4em] text-[#3d4a3e] font-light">Bienvenidos a nuestra historia</h2>
                 <p class="text-xl leading-relaxed font-light italic text-[#5b6951]">
-                    "Hagarra fuerte mi mano, que tambien te la doy."
+                    "Agarra fuerte mi mano, que tambien te la doy."
                 </p>
             </div>
 
@@ -614,10 +643,10 @@
             </button>
             <div id="gift-details" class="hidden mt-14 p-12 bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm">
                 <p class="text-[10px] tracking-[0.5em] mb-4 opacity-40 uppercase">ALIAS</p>
-                <p class="text-2xl font-light mb-12 tracking-widest">BODA.YAMILUCAS.2026</p>
+                <p class="text-2xl font-light mb-12 tracking-widest break-words">BODA.YAMILUCAS.2026</p>
                 <div class="w-12 h-px bg-white/20 mx-auto mb-12"></div>
                 <p class="text-[10px] tracking-[0.5em] mb-4 opacity-40 uppercase">TITULAR Y BANCO</p>
-                <p class="text-xl font-light tracking-widest uppercase">Lucas Martin Filomia</p>
+                <p class="text-xl font-light tracking-widest uppercase">Lucas Martín Filomía</p>
                 <p class="text-xl font-light tracking-widest uppercase">Naranja X</p>
             </div>
         </div>
